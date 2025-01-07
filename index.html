@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Title -->
+      <h1 id="title">Student Registration Form</h1>
+      <!-- Description -->
+      <p id="description"><i>Fill out the form below to register for your desired course.</i></p>
+      <form id="survey-form" action="/freecodecamp" method="post">
+        <!-- Name Field -->
+        <label id="name-label" for="name">
+          Name
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Enter your name" 
+            required 
+          >
+        </label>
+        
+        <!-- Email Field -->
+        <label id="email-label" for="email">
+          Email
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Enter your email" 
+            required 
+          >
+        </label>
+        
+        <!-- Number Field -->
+        <label id="number-label" for="number">
+          Age (optional)
+          <input 
+            type="number" 
+            id="number" 
+            name="age" 
+            placeholder="Enter your age" 
+            min="18" 
+            max="60"
+          >
+        </label>
+        
+        <!-- Course Selection -->
+        <fieldset>
+          <legend>Which course would you like to enroll in?</legend>
+          <select id="dropdown" name="course" required>
+            <option value="" disabled selected>Select your course</option>
+            <option value="web-development">Web Development</option>
+            <option value="digital-marketing">Digital Marketing</option>
+            <option value="graphic-design">Graphic Design</option>
+          </select>
+        </fieldset>
+
+        <!-- Radio Buttons -->
+        <fieldset>
+          <legend>Preferred Class Schedule</legend>
+          <label for="morning" id="schedule-label">
+            <input id="morning" type="radio" name="schedule" value="morning" checked required> Morning
+          </label>
+          <label for="evening" id="schedule-label">
+            <input id="evening" type="radio" name="schedule" value="evening" required> Evening
+          </label>
+        </fieldset>
+
+        <!-- Checkboxes -->
+        <fieldset>
+          <legend>Additional Preferences (optional)</legend>
+          <label id="prefer-label">
+            <input type="checkbox" name="preferences" value="online"> Online Classes
+          </label>
+          <label id="prefer-label">
+            <input type="checkbox" name="preferences" value="materials"> Study Materials Included
+          </label>
+        </fieldset>
+
+        <!-- Textarea -->
+        <label for="comments" id="comments-label">Additional Comments (optional)</label>
+        <textarea 
+          id="comments" 
+          name="comments" 
+          rows="8" 
+          placeholder="Write your comments here...">
+        </textarea>
+        
+        <!-- Submit Button -->
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
